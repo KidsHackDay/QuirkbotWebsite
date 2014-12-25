@@ -62,134 +62,227 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.massimo {
+	display: none !important;
+}
 
 body, html{
 	margin: 0;
 	padding: 0;
 	height: 100%;
 }
-
+.hero-small{
+	display: none;
+}
 .hero { 
-	background: url(../img/bg.jpg) no-repeat center center ; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	
+
 	height: 100%;
 	position: relative;
 	box-sizing: border-box;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	 -webkit-overflow-scrolling: touch;
 }
 .logo{
 	width: 100%;
-	max-width: 400px;
+	max-width: 275px;
+	margin-top: 30px;
 	box-sizing: border-box;
 	display: block;
+	position: absolute;
+		top: 32px;
+		left: 20%;
 }
 .quote{
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
-	max-width: 300px;
+	max-width: 270px;
 	margin: 25px 20px;
 
 }
 .dale{
-	margin-left: 30px;
+	position: absolute;
+	top: 32px;
+	right: 20%;
 }
 .kickstarter{
 	display: block;
-	width: 200px;
+	margin:	170px auto 10px auto;
+	width: 240px;
+}
+.strawbees{
+	display: block;
+	width: 230px;
 	box-sizing: border-box;
 
 	position: absolute;
 	bottom: 30px;
-	left: 50%;
-	margin-left: -100px;
+	
+		left: 20%;
+		margin-left: 0;
+
 }
+.fb-like, .fb_iframe_widget{
+	position: absolute !important;
+	display: block !important;
+	width: 350px;
+	bottom: 30px;
+	right: 20%;
+}
+.fb-like.mobile{
+	opacity: 0.001 !important;
+	width: 200px;
+}
+
 .section .container{
 	max-width: 900px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 40px 20px;
+	padding: 20px 20px;
 	box-sizing: border-box;
 }
-blockquote {
 
-  quotes: "\201C""\201D""\2018""\2019";
-}
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-}
-blockquote:after {
-  color: #ccc;
-  content: close-quote;
-}
-blockquote p {
-  display: inline;
+
+.teaser{
+	background: url(../img/hero-small.jpg) no-repeat center center ; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin-top: 30px;
 }
 
-
-
-
-
-
-
-
-
+.aspect-ratio-wrapper {
+	position: relative;
+	width: 100%; /* <-- just a default, can be anything. */
+}
+.sixteen-by-nine.aspect-ratio { padding-bottom: 56.25% }
+.aspect-ratio-wrapper .content {
+    position: absolute;
+    top: 0;  bottom: 0;  left: 0;  right: 0;
+}
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-@media (max-width: 900px) {
-  .quote{
-	
-	
-		margin: 25px auto;
 
+ 
+
+@media  (max-width: 1200px), (max-height:600px) {
+	
+	.section .container{
+		max-width: 700px;
+	}
+
+	.hero { 
+		background-image: none; 
+		
+	}
+	.kickstarter{
+		margin:	10px auto 10px auto;
+		width: 200px;
+	}
+	.strawbees{
+		position: relative;
+		margin: 40px auto 0 auto;
+		left: 0;
+	}
+	.fb-like, .fb_iframe_widget{
+		position: relative !important;
+		right: auto;
+		bottom: auto;
+		margin: 0 auto;
+	}
+	.quote{
+		margin: 25px auto;
+		display: block;
+		float: none !important; 
+		display: block !important; 
+	}
+	.dale{
+		position: relative;
+		top: auto;
+		right: auto;
 	}
 	.logo{
-		margin: 0 auto;
-	}
-
-}
-@media (min-width: 900px) {
-  .dale{
-	
-	
-		margin: 25px 20px 0 60px;
-
-	}
-}
-@media (max-height: 500px) {
-  .quote{
-	display: block;
-	width: 195px;
-	box-sizing: border-box;
-	max-width: 300px;
-	margin: 25px auto;
-
-	}
-}
-
-
-@media (max-height: 500px) {
-  .logo{
+		position: relative;
+		top: auto;
+		left: auto;
 		width: 200px;
-		margin: 0 auto;
+		margin: 0 auto 0px auto;
+	}
+	.hero-small{
+		display: block;
+		margin: 0;
+		width: 100%;
+	}
+
+}
+
+
+@media (max-width: 400px) {
+
+	.fb-like.desktop{
+		opacity: 0.001 !important;
+	}
+	.fb-like.mobile{
+		opacity: 1 !important;
 	}
 }
 
-@media (max-height: 360px) {
 
-	.hero{
-		overflow: scroll;
+@media (min-height: 600px) and (min-width: 1200px) and (max-height: 850px) {
+
+	.section .container{
+		max-width: 700px;
 	}
-  .kickstarter{
-		display: none;
+	.fb-like, .fb_iframe_widget{	
+		right: 25%;
+	}
+	.strawbees{
+		left: 25%;
+	}
+	.logo{
+		left: 25%;
+	}
+	.dale{
+		right: 25%;
+	}
+}
+@media (min-height: 600px) and  (min-width: 1200px) and (max-height: 700px) {
+
+	.section .container{
+		max-width: 600px;
+	}
+	.fb-like, .fb_iframe_widget{	
+		right: 25%;
+	}
+	.strawbees{
+		left: 25%;
+	}
+	.logo{
+		top: 25%;
+		top: 0;
+	}
+	.dale{
+		right: 25%;
+		top: 0;
+	}
+	.kickstarter{
+		margin-top: 128px;
 	}
 }
 
+
+
+/*
+
+@media (max-height: 500px) {
+	
+}
+*/
 /* ==========================================================================
    Helper classes
    ========================================================================== */

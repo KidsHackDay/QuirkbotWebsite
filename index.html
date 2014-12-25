@@ -19,6 +19,23 @@
 		<link rel="stylesheet" href="css/normalize.min.css">
 		<link rel="stylesheet" href="css/main.css">
 
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+		<link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
 		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
 	<body>
@@ -28,14 +45,24 @@
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
+
 		<section class='section hero'>
 			<div class='container'>
+
 				<img class="logo" alt="Quirkbot, a toy to make toys" src="img/quirkbot.png"/>
-				<img class="quote massimo" alt="It's the simplest robot in the world. Massimo Banzi, Arduino co-founder." src="img/massimo.png"/>
-				<img class="quote dale" alt="I think this is fascinating! Dale Dougherty, MakerCon NY" src="img/dale.png"/>
 				<img class="kickstarter" alt="Soon on Kickstarter" src="img/kickstarter.png"/>
+				<div class="aspect-ratio-wrapper teaser">
+					<div class="sixteen-by-nine aspect-ratio"></div>
+					<iframe class="content" width='100%' height='100%' src="//www.youtube.com/embed/jYL7X1Sxnio" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="quotes clearfix">
+					<img class="quote dale" alt="I think this is fascinating! Dale Dougherty, MakerCon NY" src="img/dale.png"/>
+				</div>
+				<a href="http://strawbees.com">
+				<img class="strawbees" alt="Compatible with Strawbees." src="img/strawbees.png"/></a>
 				
-				<div class="fb-like" data-href="http://facebook.com/quirkbot" data-layout="standard" data-action="recommend" data-show-faces="false" data-share="true"></div>
+				<div class="fb-like desktop" data-href="http://facebook.com/quirkbot" data-width="350px" data-layout="standard"  data-show-faces="false" data-share="true"></div>
+				<div class="fb-like mobile" data-href="http://facebook.com/quirkbot" data-width="150px" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
 			</div>
 			
 		</section>
@@ -55,6 +82,10 @@
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
 		<!-- END Facebook SDK -->
+
+		<!-- Mailchimp -->
+		<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us9.list-manage.com","uuid":"918e946313ee947520e9741d9","lid":"8a70b86fc6"}) })</script>
+		<!-- END Mailchimp -->
 
 		<!-- Google Analytics -->
 		<script>
